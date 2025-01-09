@@ -1,0 +1,15 @@
+external-dns:
+  rbac:
+    create: true
+  serviceAccount:
+    create: true
+  provider:
+    name: linode
+  policy: sync
+  env:
+    - name: LINODE_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: linode-token
+          key: password
+

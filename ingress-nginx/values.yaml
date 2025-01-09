@@ -1,0 +1,9 @@
+ingress-nginx:
+  controller:
+    service:
+      enabled: true
+      type: LoadBalancer
+      ipFamilyPolicy: PreferDualStack 
+      ipFamilies:
+        - IPv4
+        - IPv6
