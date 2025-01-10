@@ -1,3 +1,5 @@
 longhorn:
   preUpgradeChecker:
     jobEnabled: false
+  longhornUI:
+    replicas: 1
