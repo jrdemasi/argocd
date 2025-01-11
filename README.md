@@ -8,7 +8,7 @@ The final note here - running a kubernetes cluster isn't for the faint of heart.
 ## Bootstrapping a Cluster
 Spin up a cluster (I'll assume in Vultr with the Vultr Kubernetes Engine) however you want.  This can be done manually, using terraform, or using IaC of your choice.  The initial cluster needs to have exactly two things prior to adding the app-of-apps from this repository:
 1. The cluster needs to have argocd helm installed from this repo itself.
-2. The cluster needs initial secrets seeded for external-secrest to communicate with AWS.
+2. The cluster needs initial secrets seeded for external-secrets to communicate with AWS.
 
 The way that I'm bootstrapping a cluster is detailed below, and assumes you've already downloaded and referenced the VKE config file from Vultr.  I'm also assuming you've got helm installed locally :-) 
 
