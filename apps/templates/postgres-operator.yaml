@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgres-operator
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: postgres-operator
+    server: {{ .Values.spec.destination.server }}
+  project: default
+  source:
+    path: postgres-operator
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Retry=true
+    retry:
+      limit: 5 # Maximum number of retries
+      backoff:
+        duration: 5s # Initial retry interval
+        factor: 2 # Multiplication factor for the backoff
+        maxDuration: 1m # Maximum retry interval
