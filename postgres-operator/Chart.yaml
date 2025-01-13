@@ -26,3 +26,7 @@ dependencies:
   - name: pgo
     repository: "oci://registry.developers.crunchydata.com/crunchydata"
     version: "5.7.2"
+  - name: install
+    repository: "oci://registry.developers.crunchydata.com/crunchydata"
+    version: "5.7.2"
+
