@@ -19,6 +19,7 @@ spec:
       prune: true
       selfHeal: true
     syncOptions:
+    - ServerSideApply=true
     - Retry=true
     retry:
       limit: 5 # Maximum number of retries
