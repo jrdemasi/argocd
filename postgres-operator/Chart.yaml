@@ -23,6 +23,6 @@ version: 0.1.0
 appVersion: "1.0"
 
 dependencies:  
-  - name: postgres-operator
-    repository: oci://registry.developers.crunchydata.com/crunchydata/pgo 
+  - name: pgo
+    repository: "oci://registry.developers.crunchydata.com/crunchydata"
     version: "5.7.2"
